@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 400px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        #command-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #execute-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #execute-btn:hover {
+            background-color: #45a049;
+        }
+
+        #status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Browser Agent Assistant</h2>
+    <input type="text" id="command-input" placeholder="e.g., Find the cheapest laptop on Amazon" autofocus />
+    <button id="execute-btn">Execute</button>
+    <div id="status"></div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
