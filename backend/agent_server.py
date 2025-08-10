@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from agent_browser import browser, agent, execute_complex_task
+from thread_safe_browser import thread_safe_browser
 
 app = Flask(__name__)
 CORS(app)
@@ -14,7 +14,7 @@ def execute_command():
         print(f"Received command: {command}")  
         
         # Use your execute function
-        result = execute_complex_task(command)
+        result = thread_safe_browser.execute_task(command)
         
         print(f"Result: {result}") 
         

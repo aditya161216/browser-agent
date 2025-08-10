@@ -253,91 +253,91 @@ class BrowserController:
         return "No CAPTCHA found"
 
 
-browser = BrowserController()
+# browser = BrowserController()
 
-# the tools we provide our agent with
-tools = [
-    Tool(
-        name="navigate",
-        func=browser.navigate,
-        description="Navigate to a website. Input should be a URL like google.com",
-    ),
-    Tool(
-        name="click",
-        func=browser.click,
-        description="Click on something by its text. Input should be the exact text to click.",
-    ),
-    Tool(
-        name="read_page",
-        func=browser.get_text,
-        description="Read the text content of the current page",
-    ),
-    Tool(
-        name="search",
-        func=browser.search,
-        description="Search for something on the current page",
-    ),
-    Tool(
-        name="type_text",
-        func=browser.type_text,
-        description="Type text into focused element",
-    ),
-    Tool(name="press_enter", func=browser.press_enter, description="Press Enter key"),
-    Tool(
-        name="extract_prices",
-        func=browser.extract_prices,
-        description="Extract prices from page",
-    ),
-    Tool(name="go_back", func=browser.go_back, description="Go back to previous page"),
-    Tool(name="screenshot", func=browser.screenshot, description="Take a screenshot"),
-    Tool(
-        name="handle_popups",
-        func=browser.handle_popups,
-        description="Handle cookie banners and popups blocking the page"
-    ),
-    Tool(
-        name="check_for_popups",
-        func=browser.check_for_popups,
-        description="Check if there are popups on the page"
-    ),
-    Tool(
-    name="human_like_navigate",
-    func=browser.human_like_navigate,
-    description="Navigate to a URL with human-like delays and mouse movements to avoid detection"
-    ),
-    Tool(
-        name="human_like_click",
-        func=browser.human_like_click,
-        description="Click on an element with human-like mouse movement and delays"
-    ),
-    Tool(
-        name="check_captcha",
-        func=browser.check_for_captcha,
-        description="Check if there's a CAPTCHA on the page"
-    ),
-    Tool(
-        name="handle_captcha",
-        func=browser.handle_captcha_detection,
-        description="Alert user to manually solve CAPTCHA if one is detected"
-    ),
-]
+# # the tools we provide our agent with
+# tools = [
+#     Tool(
+#         name="navigate",
+#         func=browser.navigate,
+#         description="Navigate to a website. Input should be a URL like google.com",
+#     ),
+#     Tool(
+#         name="click",
+#         func=browser.click,
+#         description="Click on something by its text. Input should be the exact text to click.",
+#     ),
+#     Tool(
+#         name="read_page",
+#         func=browser.get_text,
+#         description="Read the text content of the current page",
+#     ),
+#     Tool(
+#         name="search",
+#         func=browser.search,
+#         description="Search for something on the current page",
+#     ),
+#     Tool(
+#         name="type_text",
+#         func=browser.type_text,
+#         description="Type text into focused element",
+#     ),
+#     Tool(name="press_enter", func=browser.press_enter, description="Press Enter key"),
+#     Tool(
+#         name="extract_prices",
+#         func=browser.extract_prices,
+#         description="Extract prices from page",
+#     ),
+#     Tool(name="go_back", func=browser.go_back, description="Go back to previous page"),
+#     Tool(name="screenshot", func=browser.screenshot, description="Take a screenshot"),
+#     Tool(
+#         name="handle_popups",
+#         func=browser.handle_popups,
+#         description="Handle cookie banners and popups blocking the page"
+#     ),
+#     Tool(
+#         name="check_for_popups",
+#         func=browser.check_for_popups,
+#         description="Check if there are popups on the page"
+#     ),
+#     Tool(
+#     name="human_like_navigate",
+#     func=browser.human_like_navigate,
+#     description="Navigate to a URL with human-like delays and mouse movements to avoid detection"
+#     ),
+#     Tool(
+#         name="human_like_click",
+#         func=browser.human_like_click,
+#         description="Click on an element with human-like mouse movement and delays"
+#     ),
+#     Tool(
+#         name="check_captcha",
+#         func=browser.check_for_captcha,
+#         description="Check if there's a CAPTCHA on the page"
+#     ),
+#     Tool(
+#         name="handle_captcha",
+#         func=browser.handle_captcha_detection,
+#         description="Alert user to manually solve CAPTCHA if one is detected"
+#     ),
+# ]
 
-# initialize llm
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash", google_api_key=gemini_key, temperature=0
-)
+# # initialize llm
+# llm = ChatGoogleGenerativeAI(
+#     model="gemini-2.5-flash", google_api_key=gemini_key, temperature=0
+# )
 
-# our current agent
-agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
+# # our current agent
+# agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
 
-# executes tasks using the agent
-def execute_complex_task(task_description):
-    """
-    Convert natural language to agent commands
-    Examples:
-    - "Find the cheapest laptop on Amazon"
-    - "Check the weather in San Francisco"
-    - "What's the top story on CNN?"
-    """
-    return agent.run(task_description)
+# # executes tasks using the agent
+# def execute_complex_task(task_description):
+#     """
+#     Convert natural language to agent commands
+#     Examples:
+#     - "Find the cheapest laptop on Amazon"
+#     - "Check the weather in San Francisco"
+#     - "What's the top story on CNN?"
+#     """
+#     return agent.run(task_description)
