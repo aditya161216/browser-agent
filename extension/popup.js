@@ -16,7 +16,7 @@ async function executeCommand() {
 
     try {
         // Send command to your Python server
-        const response = await fetch('http://localhost:3000/execute', {
+        const response = await fetch('http://localhost:3001/execute', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
