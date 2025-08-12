@@ -1,9 +1,9 @@
-# 🤖 Browser Agent - Natural Language Browser Automation
+# Browser Agent - Natural Language Browser Automation
 
 An intelligent browser automation system that allows users to control their web browser using natural language commands through a Chrome extension. Built with a microservices architecture using Python, LangChain, and Redis.
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![LangChain](https://img.shields.io/badge/LangChain-🦜-green.svg)
+![LangChain](https://img.shields.io/badge/LangGraph-🦜-green.svg)
 ![Redis](https://img.shields.io/badge/Redis-7.0+-red.svg)
 ![Playwright](https://img.shields.io/badge/Playwright-1.40+-purple.svg)
 
