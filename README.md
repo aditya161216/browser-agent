@@ -3,7 +3,7 @@
 An intelligent browser automation system that allows users to control their web browser using natural language commands through a Chrome extension. Built with a microservices architecture using Python, LangGraph, and Redis.
 
 
-## 🌟 Features
+## Features
 
 - **Natural Language Control**: Control your browser with commands like "Go to Amazon and search for laptops"
 - **Chrome Extension Interface**: User-friendly popup for entering commands
@@ -12,7 +12,7 @@ An intelligent browser automation system that allows users to control their web 
 - **Smart Browser Automation**: Handles popups, CAPTCHAs detection, human-like interactions
 - **Session Management**: Maintains conversation context across multiple commands
 
-## 🏗️ Architecture
+## Architecture
 
 The system uses a distributed microservices architecture to ensure scalability and separation of concerns.
 
